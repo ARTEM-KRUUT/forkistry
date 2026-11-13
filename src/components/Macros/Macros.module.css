@@ -1,0 +1,45 @@
+.compact {
+  font-size: var(--fs-meta-sm);
+  color: var(--text-2);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.letter {
+  color: var(--text-3);
+  font-weight: var(--fw-medium);
+}
+
+.dot {
+  color: var(--text-3);
+}
+
+/* Три колонки над калорийностью на странице рецепта */
+.cells {
+  display: flex;
+  margin: 0;
+}
+
+.cell {
+  display: flex;
+  flex: 1;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 2px;
+}
+
+.cell + .cell {
+  border-left: 1px solid var(--hairline);
+}
+
+.cellLabel {
+  font-size: var(--fs-caption);
+  color: var(--text-3);
+}
+
+.cellValue {
+  margin: 0;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  font-variant-numeric: tabular-nums;
+}

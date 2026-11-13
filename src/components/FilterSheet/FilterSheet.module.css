@@ -1,0 +1,45 @@
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.group {
+  margin: 0;
+  padding: 0;
+  border: none;
+  min-width: 0;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: var(--space-3);
+  padding: 0;
+}
+
+.groupTitle {
+  font-size: var(--fs-param);
+  font-weight: var(--fw-medium);
+}
+
+.hint {
+  font-size: var(--fs-meta-sm);
+  color: var(--text-2);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.reset {
+  flex: 0 0 120px;
+  padding: 0;
+}
+
+.apply {
+  flex: 1;
+}

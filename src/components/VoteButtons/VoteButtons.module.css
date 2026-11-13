@@ -1,0 +1,62 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.vote {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--h-header-action);
+  padding: 0 var(--space-4) 0 var(--pad-control);
+  border: 1px solid var(--field-border);
+  border-radius: var(--radius-pill);
+  background: none;
+  color: var(--text-2);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.vote:hover {
+  background: var(--surface-2);
+}
+
+/* Кнопка лайка по макету всегда в зелёной гамме, активная — с заливкой иконки */
+.like {
+  border-color: transparent;
+  background: var(--like-soft);
+  color: var(--like);
+}
+
+.like:hover {
+  background: var(--like-soft);
+  filter: brightness(0.97);
+}
+
+.likeActive {
+  background: var(--like);
+  color: var(--on-accent);
+}
+
+.likeActive:hover {
+  background: var(--like);
+}
+
+.dislikeActive,
+.dislikeActive:hover {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--on-accent);
+}
+
+.saved {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1-5);
+  padding-left: var(--space-2);
+  font-size: var(--fs-meta);
+  color: var(--text-2);
+}

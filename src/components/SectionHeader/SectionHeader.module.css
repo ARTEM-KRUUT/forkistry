@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 0 var(--gutter);
+}
+
+.title {
+  font-size: var(--fs-section);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  flex-shrink: 0;
+  color: var(--accent-ink);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  border-radius: var(--radius-field);
+}
+
+.link:hover {
+  text-decoration: underline;
+}

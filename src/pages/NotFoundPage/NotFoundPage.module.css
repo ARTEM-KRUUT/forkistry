@@ -1,0 +1,5 @@
+.page {
+  display: flex;
+  align-items: center;
+  min-height: calc(100dvh - var(--h-header) - var(--h-bottom-nav));
+}

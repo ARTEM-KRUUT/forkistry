@@ -1,0 +1,161 @@
+.page {
+  padding-bottom: var(--space-6);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-6) var(--gutter) 0;
+}
+
+.avatar {
+  position: relative;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+}
+
+.camera {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--bg);
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--on-accent);
+}
+
+.who {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  text-align: center;
+}
+
+.name {
+  font-size: var(--fs-sheet-title);
+}
+
+.bio {
+  color: var(--text-2);
+}
+
+.stats {
+  display: flex;
+  gap: var(--space-6);
+  margin: 0;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.statLabel {
+  font-size: var(--fs-meta-sm);
+  color: var(--text-3);
+}
+
+.statValue {
+  margin: 0;
+  font-size: 18px;
+  font-weight: var(--fw-medium);
+}
+
+.buttons {
+  display: flex;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.logout {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--h-button);
+  height: var(--h-button);
+  padding: 0;
+  border: 1px solid var(--field-border);
+  border-radius: var(--radius-button);
+  background: none;
+  color: var(--ink);
+}
+
+.logout:hover {
+  background: var(--surface-2);
+}
+
+.mine {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-8) var(--gutter) 0;
+}
+
+.mineHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-2);
+}
+
+.h2 {
+  font-size: var(--fs-section);
+}
+
+.add {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  color: var(--accent-ink);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+  border-radius: var(--radius-field);
+}
+
+.add:hover {
+  text-decoration: underline;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rowSkeleton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+}
+
+.rowSkeletonText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .buttons {
+    max-width: 420px;
+  }
+}

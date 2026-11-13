@@ -1,0 +1,76 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  height: var(--h-button);
+  padding: 0 var(--space-6);
+  border: none;
+  border-radius: var(--radius-button);
+  font-size: var(--fs-button);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: filter var(--transition-fast), background-color var(--transition-fast);
+}
+
+.button:hover:not(:disabled) {
+  filter: brightness(0.96);
+}
+
+.button:active:not(:disabled) {
+  filter: brightness(0.9);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.full {
+  width: 100%;
+}
+
+.primary {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.secondary {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.danger {
+  background: var(--surface-2);
+  color: var(--error);
+}
+
+/* Подтверждение удаления */
+.dangerSolid {
+  background: var(--error);
+  color: var(--on-accent);
+}
+
+/* Обводка: «Выйти», «Назад» в режиме готовки */
+.outline {
+  border: 1px solid var(--field-border);
+  background: none;
+  color: var(--ink);
+}
+
+/* Текстовая кнопка-ссылка («Перейти в каталог») */
+.link {
+  height: auto;
+  min-height: var(--tap-min);
+  padding: 0 var(--space-2);
+  background: none;
+  color: var(--accent-ink);
+  font-size: var(--fs-body);
+}
+
+.link:hover:not(:disabled) {
+  filter: none;
+  text-decoration: underline;
+}

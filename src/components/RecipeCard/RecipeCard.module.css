@@ -1,0 +1,146 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  transition: box-shadow var(--transition-fast);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-soft);
+}
+
+/* Видимый фокус всей карточки, когда фокус на растянутой ссылке */
+.card:has(.link:focus-visible) {
+  box-shadow: var(--focus-ring);
+}
+
+.media {
+  position: relative;
+}
+
+.photo {
+  aspect-ratio: 358 / 196;
+}
+
+.likeBadge {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+}
+
+.difficulty {
+  position: absolute;
+  left: var(--space-3);
+  bottom: var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-icon);
+  height: var(--h-badge);
+  padding: 0 var(--space-2-5) 0 var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--glass-strong);
+  color: var(--ink);
+  font-size: var(--fs-meta-sm);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+}
+
+.hat {
+  color: var(--accent);
+}
+
+.favButton {
+  position: absolute;
+  z-index: 2; /* поверх растянутой ссылки */
+  top: var(--space-3);
+  right: var(--space-2-5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--h-chip);
+  height: var(--h-chip);
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--glass);
+  color: var(--ink);
+}
+
+.favActive {
+  color: var(--accent);
+}
+
+.favActive svg {
+  fill: currentColor;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3-5) var(--space-4) var(--space-4);
+}
+
+.category,
+.author {
+  font-size: var(--fs-meta-sm);
+  color: var(--text-2);
+}
+
+.title {
+  font-size: var(--fs-card);
+}
+
+.link {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.link:focus-visible {
+  box-shadow: none;
+}
+
+/* Растянутая ссылка: клик по любому месту карточки ведёт на рецепт */
+.link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.params {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--fs-meta);
+  color: var(--text-2);
+}
+
+.params li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1-5);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-top: var(--space-1);
+}
+
+.saves {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-icon);
+  font-size: var(--fs-meta-sm);
+  color: var(--text-3);
+}

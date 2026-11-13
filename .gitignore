@@ -1,0 +1,15 @@
+node_modules
+dist
+.env
+.env.local
+*.log
+.DS_Store
+.playwright-mcp
+.pocketbase
+coverage
+
+# Рабочие заметки и контекст задачи — только локально
+CLAUDE.md
+docs/
+.claude/
+Screenshots/

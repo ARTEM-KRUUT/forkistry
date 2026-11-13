@@ -1,0 +1,115 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding-top: env(safe-area-inset-top);
+  border-bottom: 1px solid var(--hairline);
+  background: var(--bg);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  max-width: var(--content-max);
+  height: var(--h-header);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* Шапка только для десктопа (страница рецепта: на телефоне вместо неё фото с кнопками) */
+.desktopOnly {
+  display: none;
+}
+
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  border-radius: var(--radius-button);
+  text-decoration: none;
+}
+
+/* Навигация в шапке появляется только на десктопе */
+.nav {
+  display: none;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  height: var(--h-header-action);
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-pill);
+  color: var(--text-2);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.navLink:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.navActive,
+.navActive:hover {
+  background: var(--surface-2);
+  color: var(--accent-ink);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.addButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: var(--h-header-action);
+  padding: 0 var(--pad-control) 0 var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  transition: filter var(--transition-fast);
+}
+
+.addButton:hover {
+  filter: brightness(0.97);
+}
+
+.profile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--h-header-action);
+  height: var(--h-header-action);
+  border-radius: 50%;
+  background: var(--surface-2);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.profileUser {
+  background: none;
+}
+
+@media (min-width: 1024px) {
+  .desktopOnly {
+    display: block;
+  }
+
+  .nav {
+    display: flex;
+    flex: 1;
+    gap: var(--space-1);
+    margin-left: var(--space-6);
+  }
+}

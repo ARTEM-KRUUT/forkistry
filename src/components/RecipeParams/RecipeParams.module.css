@@ -1,0 +1,62 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: var(--space-3-5) 0;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-photo-sm);
+  background: var(--surface);
+}
+
+/* БЖУ над временем, сложностью и калорийностью */
+.macros {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-3);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.macrosTitle {
+  font-size: var(--fs-caption);
+  color: var(--text-3);
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  margin: 0;
+}
+
+/* Подпись визуально под значением, в разметке — перед ним (dt → dd) */
+.item {
+  display: flex;
+  flex: 1;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+  min-width: 0;
+  padding: 0 var(--space-2);
+  text-align: center;
+}
+
+.item + .item {
+  border-left: 1px solid var(--hairline);
+}
+
+.label {
+  font-size: var(--fs-caption);
+  color: var(--text-3);
+}
+
+.value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  margin: 0;
+  font-size: var(--fs-param);
+  font-weight: var(--fw-medium);
+}

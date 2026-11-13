@@ -1,0 +1,73 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.frame {
+  width: 100%;
+  border-radius: var(--radius-card);
+  cursor: grab;
+  touch-action: none; /* перетаскивание пальцем не прокручивает страницу */
+}
+
+.frame:active {
+  cursor: grabbing;
+}
+
+.badge {
+  position: absolute;
+  left: var(--space-2);
+  bottom: var(--space-2);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: var(--h-badge);
+  padding: 0 var(--space-2-5);
+  border-radius: var(--radius-pill);
+  background: var(--glass-strong);
+  color: var(--ink);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  pointer-events: none;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.zoomLabel {
+  font-size: var(--fs-meta-sm);
+  color: var(--text-2);
+}
+
+.zoom {
+  flex: 1;
+  min-width: 0;
+  accent-color: var(--accent);
+}
+
+.btn {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--tap-min);
+  height: var(--tap-min);
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-field);
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.btn:hover:not(:disabled) {
+  filter: brightness(0.96);
+}
+
+.btn:disabled {
+  color: var(--text-3);
+  cursor: not-allowed;
+}

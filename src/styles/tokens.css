@@ -1,0 +1,121 @@
+/* Дизайн-токены Forkistry (docs/design.md). Хардкод цветов/радиусов/отступов в компонентах запрещён. */
+:root {
+  /* Цвета — палитра «Ягода» */
+  --bg: #f8f7f9;
+  --surface: #ffffff;
+  --surface-2: #f1eef3;
+  --ink: #1a1720;
+  --text-2: #6e6875;
+  --text-3: #9a93a0;
+  --accent: #d42a63;
+  --accent-soft: #fde6ee;
+  --accent-ink: #b01e50;
+  --on-accent: #ffffff;
+  --like: #13874a;
+  --like-soft: #dff3e7;
+  --error: #b42318;
+  --hairline: rgba(26, 23, 32, 0.08);
+  --field-border: rgba(26, 23, 32, 0.14);
+  --chip-border: rgba(26, 23, 32, 0.12);
+  --tile-border: rgba(26, 23, 32, 0.06);
+  --overlay: rgba(26, 23, 32, 0.45);
+  --handle: rgba(26, 23, 32, 0.16);       /* ручка панели, рамка тегов техники */
+  --dashed: rgba(26, 23, 32, 0.2);        /* пунктир «добавить фото» в редакторе */
+  --glass-photo: rgba(255, 255, 255, 0.94); /* кнопки на фото страницы рецепта */
+  --glass: rgba(255, 255, 255, 0.92);      /* кнопки поверх фото */
+  --glass-strong: rgba(255, 255, 255, 0.95); /* плашка сложности на фото */
+
+  /* Пастель плиток категорий */
+  --cat-breakfast: #fce9c8;
+  --cat-soups: #f9d6d5;
+  --cat-hot: #f6dcc8;
+  --cat-pasta: #fbf0c9;
+  --cat-salads: #ddefd3;
+  --cat-bakery: #eadcf5;
+  --cat-desserts: #d9e8f7;
+
+  /* Шрифты */
+  --font-display: 'Unbounded', system-ui, sans-serif;
+  --font-text: 'Onest', system-ui, sans-serif;
+
+  /* Кегли */
+  --fs-screen: 22px;      /* заголовок экрана 22–24 */
+  --fs-screen-lg: 24px;
+  --fs-section: 17px;
+  --fs-card: 16px;
+  --fs-logo: 19px;
+  --fs-sheet-title: 20px;
+  --fs-param: 16px;      /* значения в карточке параметров, подзаголовки панели */
+  --fs-badge: 11px;      /* счётчик на кнопке фильтров */
+  --fs-button: 16px;
+  --fs-body: 15px;
+  --fs-meta: 14px;
+  --fs-meta-sm: 13px;
+  --fs-caption: 12px;
+  --fs-step: 22px;        /* текст шага в режиме готовки */
+  --fs-timer: 40px;
+
+  --lh-heading: 1.25;
+  --lh-body: 1.45;
+  --lh-step: 1.36;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* Отступы — сетка 4 px */
+  --space-1: 4px;
+  --gap-icon: 5px;    /* иконка + текст в бейджах (по макету) */
+  --space-1-5: 6px;
+  --space-2: 8px;
+  --space-2-5: 10px;
+  --space-3: 12px;
+  --space-3-5: 14px;
+  --pad-control: 14px; /* горизонтальный отступ в полях и чипах */
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --gutter: var(--space-4); /* поля экрана */
+
+  /* Радиусы */
+  --radius-field: 10px;
+  --radius-button: 12px;
+  --radius-card: 16px;
+  --radius-tile: 16px;
+  --radius-tile-img: 12px;
+  --radius-photo-sm: 14px; /* фото малой карточки, карточка параметров */
+  --radius-tag: 8px;       /* теги техники на странице рецепта */
+  --radius-panel: 20px;    /* панель «Что есть на кухне» */
+  --radius-sheet: 24px;
+  --radius-pill: 999px;
+
+  /* Размеры элементов */
+  --h-button: 52px;
+  --h-field: 48px;
+  --h-chip: 36px;
+  --h-badge: 28px;
+  --h-header: 56px;
+  --h-header-action: 40px;
+  --empty-icon: 72px;
+  --h-bottom-nav: 64px;
+  --tap-min: 44px;
+  --content-max: 1200px;
+  --tile-img: 92px;
+  --sheet-max: 560px;
+  --hero-h: 300px;
+  --step-photo-h: 148px;
+  --card-small-w: 200px;
+  --card-small-photo-h: 140px;
+
+  /* Тени — только плитки категорий и сегмент-контрол */
+  --shadow-soft: 0 2px 4px rgba(26, 23, 33, 0.06);
+
+  /* Фокус */
+  --focus-ring: 0 0 0 3px var(--accent-soft), 0 0 0 5px var(--accent);
+
+  /* Анимации */
+  --transition-fast: 150ms ease;
+  --transition-sheet: 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}

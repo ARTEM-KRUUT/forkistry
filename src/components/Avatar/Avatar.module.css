@@ -1,0 +1,30 @@
+.avatar {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--size);
+  height: var(--size);
+  overflow: hidden;
+  border-radius: 50%;
+  font-size: calc(var(--size) * 0.3);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+}
+
+.accent {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-size: calc(var(--size) * 0.35);
+}
+
+.neutral {
+  background: var(--surface-2);
+  color: var(--text-2);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

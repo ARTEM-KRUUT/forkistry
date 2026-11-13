@@ -1,0 +1,70 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.photo {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-tile-img);
+}
+
+.info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.title {
+  color: var(--ink);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  line-height: 20px;
+  text-decoration: none;
+  border-radius: var(--radius-field);
+}
+
+.title:hover {
+  color: var(--accent-ink);
+}
+
+.meta {
+  font-size: var(--fs-meta-sm);
+  color: var(--text-2);
+}
+
+.likes {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--fs-meta-sm);
+  color: var(--text-3);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tap-min);
+  height: var(--tap-min);
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-field);
+  background: none;
+  color: var(--ink);
+}
+
+.action:hover {
+  background: var(--surface-2);
+}

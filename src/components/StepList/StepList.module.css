@@ -1,0 +1,72 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.num {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--h-badge);
+  height: var(--h-badge);
+  border-radius: 50%;
+  background: var(--surface-2);
+  font-size: var(--fs-meta-sm);
+  font-weight: var(--fw-medium);
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-2-5);
+  min-width: 0;
+  padding-top: 3px;
+}
+
+.text {
+  line-height: 22px;
+}
+
+.timer {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1-5);
+  color: var(--accent-ink);
+  font-size: var(--fs-meta-sm);
+  font-weight: var(--fw-medium);
+}
+
+/* Квадрат: фото с телефона (вертикальные и квадратные) видно целиком, без узкой полосы */
+.photo {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-tile-img);
+}
+
+.more {
+  align-self: flex-start;
+  min-height: var(--tap-min);
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--accent-ink);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
+  border-radius: var(--radius-field);
+}
+
+.more:hover {
+  text-decoration: underline;
+}

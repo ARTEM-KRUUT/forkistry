@@ -1,0 +1,15 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.preview {
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  color: var(--error);
+  font-size: var(--fs-meta);
+}

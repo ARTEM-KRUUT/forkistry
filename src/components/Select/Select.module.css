@@ -1,0 +1,22 @@
+.box {
+  position: relative;
+}
+
+.select {
+  padding-right: calc(var(--pad-control) + 24px);
+  appearance: none;
+  cursor: pointer;
+}
+
+.placeholder {
+  color: var(--text-3);
+}
+
+.chevron {
+  position: absolute;
+  top: 50%;
+  right: var(--space-3);
+  transform: translateY(-50%);
+  color: var(--text-2);
+  pointer-events: none;
+}

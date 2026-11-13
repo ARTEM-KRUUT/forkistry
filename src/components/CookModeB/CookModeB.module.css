@@ -1,0 +1,241 @@
+.root {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-2-5);
+  margin: 0;
+  padding: var(--space-2) var(--gutter) var(--space-4);
+  list-style: none;
+}
+
+/* Выполненный шаг */
+.done {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-1) 0;
+  border: none;
+  border-radius: var(--radius-field);
+  background: none;
+  text-align: left;
+}
+
+.check {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--h-badge);
+  height: var(--h-badge);
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--on-accent);
+}
+
+.doneText {
+  flex: 1;
+  color: var(--text-3);
+  font-size: var(--fs-meta);
+  line-height: 1.4;
+}
+
+/* Текущий шаг */
+.current {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1.5px solid var(--accent);
+  border-radius: 18px;
+  background: var(--surface);
+  scroll-margin: var(--space-10);
+}
+
+.currentLabel {
+  color: var(--accent-ink);
+  font-size: var(--fs-meta-sm);
+  font-weight: var(--fw-semibold);
+}
+
+.currentPhoto {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: 60dvh;
+  border-radius: var(--radius-card);
+}
+
+.currentText {
+  font-size: var(--fs-section);
+  font-weight: var(--fw-medium);
+  line-height: 1.4;
+}
+
+/* Следующие шаги */
+.next {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2-5);
+  padding: var(--space-3-5) var(--space-4);
+  border: 1px solid var(--hairline);
+  border-radius: 18px;
+  background: var(--surface);
+}
+
+.nextHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-field);
+  background: none;
+  text-align: left;
+}
+
+.thumb {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+  border-radius: var(--radius-field);
+  background: var(--surface-2);
+  color: var(--text-2);
+}
+
+.thumbPhoto {
+  width: 100%;
+  height: 100%;
+}
+
+.nextBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.nextNum {
+  color: var(--text-2);
+  font-size: var(--fs-meta-sm);
+  font-weight: var(--fw-medium);
+}
+
+.nextText {
+  font-size: var(--fs-body);
+  line-height: 1.4;
+}
+
+/* Таймер в карточке */
+.timer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.timerLarge {
+  gap: var(--space-3);
+}
+
+.timerBtn,
+.timerBtnLarge {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+}
+
+.timerBtn {
+  width: var(--h-chip);
+  height: var(--h-chip);
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.timerBtnLarge {
+  width: var(--tap-min);
+  height: var(--tap-min);
+  background: var(--ink);
+  color: var(--on-accent);
+}
+
+.timerInfo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-1-5);
+  min-width: 0;
+}
+
+.timerRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.clock,
+.clockLarge {
+  font-weight: var(--fw-semibold);
+  font-variant-numeric: tabular-nums;
+}
+
+.clock {
+  font-size: var(--fs-param);
+}
+
+.clockLarge {
+  font-size: var(--fs-screen-lg);
+}
+
+.of {
+  color: var(--text-3);
+  font-size: var(--fs-meta-sm);
+}
+
+.bar {
+  position: relative;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--surface-2);
+}
+
+.barFill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 3px;
+  background: var(--accent);
+  transition: width 250ms linear;
+}
+
+.timerHint {
+  color: var(--text-2);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
+}
+
+.timerDone .clock,
+.timerDone .clockLarge {
+  color: var(--accent-ink);
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  padding: var(--space-3) var(--gutter) calc(var(--space-6) + env(safe-area-inset-bottom));
+  background: var(--bg);
+}

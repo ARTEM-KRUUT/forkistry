@@ -1,0 +1,38 @@
+/* container-type: size — чтобы повёрнутое на 90° фото знало размеры рамки (единицы cqw/cqh) */
+.photo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--surface-2);
+  container-type: size;
+}
+
+/* Поворачиваемый слой по центру рамки; при 90°/270° ширина и высота меняются местами */
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100cqw;
+  height: 100cqh;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  user-select: none;
+  transition: opacity var(--transition-fast);
+}
+
+.loaded {
+  opacity: 1;
+}
+
+.icon {
+  color: var(--text-3);
+}

@@ -1,0 +1,29 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.formError {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-field);
+  background: var(--accent-soft);
+  color: var(--error);
+  font-size: var(--fs-meta);
+}
+
+.switch {
+  color: var(--text-2);
+  text-align: center;
+}
+
+.switch a {
+  color: var(--accent-ink);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  border-radius: var(--radius-field);
+}
+
+.switch a:hover {
+  text-decoration: underline;
+}

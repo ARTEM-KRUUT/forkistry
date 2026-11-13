@@ -1,0 +1,132 @@
+.page {
+  width: 100%;
+  max-width: 640px;
+  min-height: 100dvh;
+  margin: 0 auto;
+}
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  height: var(--h-bottom-nav);
+  padding: env(safe-area-inset-top) var(--gutter) 0;
+  background: var(--bg);
+}
+
+.barTitle {
+  font-family: var(--font-text);
+  font-size: var(--fs-section);
+  font-weight: var(--fw-medium);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100dvh - var(--h-bottom-nav));
+}
+
+.fields {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-2) var(--gutter) var(--space-6);
+}
+
+.photoBox {
+  border-radius: var(--radius-card);
+}
+
+.photoEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1-5);
+  height: 140px;
+  border: 1px dashed var(--dashed);
+  border-radius: var(--radius-card);
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.photoTitle {
+  font-weight: var(--fw-medium);
+}
+
+.photoHint {
+  font-size: var(--fs-meta-sm);
+  color: var(--text-2);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: var(--space-3);
+  padding: 0;
+}
+
+.groupTitle {
+  font-size: var(--fs-param);
+  font-weight: var(--fw-medium);
+}
+
+.groupHint {
+  font-size: var(--fs-meta-sm);
+  color: var(--text-2);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* Панель публикации прилипает к низу экрана */
+.publish {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--gutter) calc(var(--space-6) + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--hairline);
+  background: var(--surface);
+}
+
+.summary {
+  font-size: var(--fs-meta-sm);
+  color: var(--error);
+}
+
+/* «Нужная техника»: два ряда — обязательная и «подойдёт любая из» */
+.subgroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.subTitle {
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
+}

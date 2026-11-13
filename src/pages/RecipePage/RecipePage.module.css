@@ -1,0 +1,186 @@
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.bar {
+  padding: var(--space-4) var(--gutter) 0;
+}
+
+.hero {
+  position: relative;
+}
+
+.heroPhoto {
+  height: var(--hero-h);
+}
+
+.heroActions {
+  position: absolute;
+  top: calc(var(--space-4) + env(safe-area-inset-top));
+  left: var(--gutter);
+  right: var(--gutter);
+  display: flex;
+  justify-content: space-between;
+}
+
+.heroRight {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.glass {
+  background: var(--glass-photo);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--gutter) var(--space-6);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.meta {
+  font-size: var(--fs-meta);
+  color: var(--text-2);
+}
+
+.author {
+  color: var(--accent-ink);
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+  border-radius: var(--radius-field);
+}
+
+.author:hover {
+  text-decoration: underline;
+}
+
+.title {
+  font-size: var(--fs-screen);
+}
+
+.date {
+  font-size: var(--fs-meta-sm);
+  color: var(--text-3);
+}
+
+.ownerActions {
+  display: flex;
+  gap: var(--space-2);
+  padding-top: var(--space-2);
+}
+
+.ownerBtn {
+  flex: 1;
+  height: var(--h-header-action);
+  padding: 0 var(--space-3);
+  font-size: var(--fs-meta);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--space-2);
+}
+
+.sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-bottom: var(--space-2);
+}
+
+.h2 {
+  font-size: var(--fs-section);
+}
+
+.section > .h2 {
+  padding-bottom: var(--space-3-5);
+}
+
+.stepsCount {
+  margin-left: var(--space-1);
+  font-family: var(--font-text);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  color: var(--text-3);
+}
+
+.yield {
+  font-size: var(--fs-meta);
+  color: var(--text-2);
+  text-align: right;
+}
+
+.total {
+  padding-top: var(--space-3);
+  font-size: var(--fs-meta-sm);
+  color: var(--text-2);
+}
+
+/* «Начать готовить» прилипает над нижней панелью */
+.cta {
+  position: sticky;
+  bottom: calc(var(--h-bottom-nav) + env(safe-area-inset-bottom));
+  z-index: 5;
+  margin-top: auto;
+  padding: var(--space-3) var(--gutter);
+  border-top: 1px solid var(--hairline);
+  background: var(--surface);
+}
+
+@media (min-width: 768px) {
+  .heroPhoto {
+    height: 420px;
+  }
+}
+
+/* Десктоп: фото слева закреплено, содержимое и кнопка «Начать готовить» справа */
+@media (min-width: 1024px) {
+  .page {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    column-gap: var(--space-8);
+    padding: var(--space-6) var(--gutter) 0;
+  }
+
+  .hero {
+    grid-row: 1 / span 2;
+    align-self: start;
+    position: sticky;
+    top: calc(var(--h-header) + var(--space-6));
+    overflow: hidden;
+    border-radius: var(--radius-card);
+  }
+
+  .heroPhoto {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .content {
+    padding: 0 0 var(--space-6);
+  }
+
+  .cta {
+    grid-column: 2;
+    bottom: 0;
+    margin: 0 calc(-1 * var(--gutter));
+    border-radius: var(--radius-card) var(--radius-card) 0 0;
+  }
+
+  .bar {
+    grid-column: 1 / -1;
+  }
+}

@@ -1,0 +1,133 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2-5);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: var(--space-2-5);
+  padding: 0;
+}
+
+.title {
+  font-size: var(--fs-param);
+  font-weight: var(--fw-medium);
+}
+
+.hint {
+  font-size: var(--fs-meta-sm);
+  line-height: 18px;
+  color: var(--text-2);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.name {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Вторая строка: количество, единица, «≈ N г» */
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.amountRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding-right: calc(var(--h-chip) + var(--space-2));
+}
+
+.qty {
+  flex: 0 0 96px;
+}
+
+.unit {
+  flex: 0 0 150px;
+}
+
+.grams {
+  line-height: var(--h-field);
+  color: var(--text-2);
+  font-size: var(--fs-meta);
+  white-space: nowrap;
+}
+
+@media (max-width: 380px) {
+  .unit {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+.remove {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--h-chip);
+  height: var(--h-field);
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-field);
+  background: none;
+  color: var(--text-2);
+}
+
+.remove:hover {
+  background: var(--surface-2);
+  color: var(--error);
+}
+
+.note {
+  margin-top: var(--space-1);
+  font-size: var(--fs-caption);
+  color: var(--text-2);
+}
+
+.error {
+  font-size: var(--fs-meta-sm);
+  color: var(--error);
+}
+
+.add {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: var(--space-1-5);
+  min-height: var(--tap-min);
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--accent-ink);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  border-radius: var(--radius-field);
+}
+
+.add:hover {
+  text-decoration: underline;
+}

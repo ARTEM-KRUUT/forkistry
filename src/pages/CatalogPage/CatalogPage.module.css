@@ -1,0 +1,108 @@
+.page {
+  padding-bottom: var(--space-6);
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3-5);
+  padding: var(--space-4) var(--gutter) 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.title {
+  font-size: var(--fs-screen);
+}
+
+.count {
+  font-size: var(--fs-meta);
+  color: var(--text-3);
+}
+
+.searchRow {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.categories {
+  padding-top: var(--space-3-5);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--gutter) 0;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: var(--fs-meta);
+  color: var(--text-2);
+}
+
+.resetLink {
+  flex-shrink: 0;
+  min-height: var(--tap-min);
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--accent-ink);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
+  border-radius: var(--radius-field);
+}
+
+.resetLink:hover {
+  text-decoration: underline;
+}
+
+.list {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: var(--space-2) var(--gutter) 0;
+  list-style: none;
+}
+
+/* Планшет — 2 колонки, десктоп — 3 */
+@media (min-width: 768px) {
+  .list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+}
+
+/* На широком экране строка фильтров и сортировка — в одну линию */
+@media (min-width: 768px) {
+  .controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+  }
+
+  .summary {
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+  .controls > :last-child {
+    margin-left: auto;
+  }
+}

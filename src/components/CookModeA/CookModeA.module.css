@@ -1,0 +1,84 @@
+.root {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.progress {
+  display: flex;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0 var(--gutter);
+  list-style: none;
+}
+
+.seg,
+.segDone,
+.segCurrent {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--chip-border);
+}
+
+.segDone {
+  background: var(--ink);
+}
+
+.segCurrent {
+  background: var(--accent);
+}
+
+/* Невидимая увеличенная зона нажатия поверх тонкой полоски */
+.segBtn {
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin-top: -8px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3-5);
+  padding: var(--space-5) var(--gutter) 0;
+}
+
+/* Вертикальное 4:5 почти на всю ширину — фото с телефона хорошо видно; высота не больше 62 % экрана */
+.photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: 62dvh;
+  border-radius: var(--radius-card);
+}
+
+.num {
+  color: var(--accent-ink);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-semibold);
+}
+
+.text {
+  font-size: var(--fs-step);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-step);
+}
+
+.spacer {
+  flex: 1;
+  min-height: var(--space-6);
+}
+
+.timer {
+  padding: 0 var(--gutter);
+}
+
+.nav {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--gutter) calc(var(--space-6) + env(safe-area-inset-bottom));
+}

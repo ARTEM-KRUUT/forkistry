@@ -1,0 +1,35 @@
+.screen {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding-bottom: var(--space-10);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  height: var(--h-bottom-nav);
+  padding: env(safe-area-inset-top) var(--gutter) 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-6) var(--gutter) 0;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.title {
+  font-size: var(--fs-screen-lg);
+}
+
+.subtitle {
+  color: var(--text-2);
+  line-height: 22px;
+}

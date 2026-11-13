@@ -1,0 +1,70 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-6) var(--gutter) var(--space-10);
+}
+
+.h1 {
+  font-size: var(--fs-screen-lg);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.h2 {
+  font-size: var(--fs-section);
+  color: var(--text-2);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Горизонтальная лента с прокруткой, выходящая за поля экрана */
+.scroll {
+  display: flex;
+  gap: var(--space-2);
+  margin: 0 calc(-1 * var(--gutter));
+  padding: var(--space-1) var(--gutter) var(--space-2);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-4);
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0 calc(-1 * var(--gutter));
+}
+
+/* В витрине шапки не прилипают */
+.frame > header {
+  position: static;
+}
+
+.smallSkeleton {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: var(--space-2);
+  width: var(--card-small-w);
+}

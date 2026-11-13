@@ -1,0 +1,73 @@
+.field {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: var(--space-2-5);
+  min-width: 0;
+  padding: 0 var(--space-1) 0 var(--pad-control);
+  border: 1px solid var(--chip-border);
+  background: var(--surface);
+  transition: border-color var(--transition-fast);
+}
+
+.field:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.md {
+  height: var(--h-field);
+  border-radius: var(--radius-button);
+}
+
+.lg {
+  height: var(--h-button);
+  border-radius: var(--radius-photo-sm);
+}
+
+.icon {
+  flex-shrink: 0;
+  color: var(--text-3);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: var(--fs-body);
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--text-3);
+}
+
+/* Свой крестик вместо системного */
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.input:focus-visible {
+  box-shadow: none;
+}
+
+.clear {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--h-chip);
+  height: var(--h-chip);
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: var(--text-3);
+}
+
+.clear:hover {
+  color: var(--ink);
+}

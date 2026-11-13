@@ -1,0 +1,37 @@
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  border-radius: var(--radius-button);
+  background: var(--surface-2);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--h-chip);
+  height: var(--h-chip);
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-button);
+  background: none;
+  color: var(--ink);
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--hairline);
+}
+
+.btn:disabled {
+  color: var(--text-3);
+  cursor: not-allowed;
+}
+
+.value {
+  min-width: 72px;
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}

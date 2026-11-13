@@ -1,0 +1,98 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay);
+  animation: fade var(--transition-sheet);
+}
+
+.sheet {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--sheet-max);
+  max-height: calc(100dvh - var(--space-10));
+  padding: var(--space-3) var(--gutter) calc(var(--space-6) + env(safe-area-inset-bottom));
+  border-radius: var(--radius-sheet) var(--radius-sheet) 0 0;
+  background: var(--bg);
+  animation: slide-up var(--transition-sheet);
+}
+
+.sheet:focus-visible {
+  box-shadow: none;
+}
+
+.handle {
+  align-self: center;
+  width: 40px;
+  height: 4px;
+  margin-bottom: var(--space-6);
+  border-radius: 2px;
+  background: var(--handle);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.title {
+  font-size: var(--fs-sheet-title);
+}
+
+/* Содержимое прокручивается, кнопки остаются внизу */
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.footer {
+  display: flex;
+  gap: var(--space-2);
+  padding-top: var(--space-6);
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+/* На широком экране — окно по центру */
+@media (min-width: 768px) {
+  .root {
+    align-items: center;
+    padding: var(--space-6);
+  }
+
+  .sheet {
+    max-height: calc(100dvh - 2 * var(--space-6));
+    padding-bottom: var(--space-6);
+    border-radius: var(--radius-sheet);
+    animation-name: fade;
+  }
+
+  .handle {
+    display: none;
+  }
+}

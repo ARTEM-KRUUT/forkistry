@@ -1,0 +1,47 @@
+.root {
+  display: flex;
+  padding: var(--space-1);
+  border-radius: var(--radius-button);
+  background: var(--surface-2);
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: var(--h-header-action);
+  border-radius: 9px;
+  color: var(--text-2);
+  font-size: var(--fs-meta);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  user-select: none;
+}
+
+.sm .item {
+  height: 32px;
+  font-size: var(--fs-meta-sm);
+}
+
+.item:hover {
+  color: var(--ink);
+}
+
+.active {
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: var(--fw-medium);
+  box-shadow: var(--shadow-soft);
+}
+
+.item:has(.input:focus-visible) {
+  box-shadow: var(--focus-ring);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}

@@ -1,0 +1,19 @@
+.scroll {
+  display: flex;
+  margin: 0;
+  padding: var(--space-1) var(--gutter) var(--space-2-5);
+  list-style: none;
+  overflow-x: auto;
+  scroll-padding-inline: var(--gutter);
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll > * {
+  scroll-snap-align: start;
+}
